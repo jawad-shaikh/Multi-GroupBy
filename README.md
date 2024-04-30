@@ -68,6 +68,7 @@ Multi GroupBy lets each user be in all the groups they belong to. It understands
 ```js
 
 // Users data
+const multiGroupBy = require("multi-groupby");
 
 const users = [
   { name: "Alice", userID: "001", posts: 50, comments: 150, lastLogin: "2024-04-25", reports: 0, verified: true },
