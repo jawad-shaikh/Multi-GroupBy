@@ -95,7 +95,8 @@ function classifyUser(user) {
   return groups;
 }
 
-const groupedUsers = multiGroupBy(users, classifyUser);
+const allPossibleGroups = ["Active Users", "Inactive Users", "Spam Accounts", "Verified Users"];
+const groupedUsers = multiGroupBy(users, allPossibleGroups, classifyUser);
 console.log(groupedUsers);
 
 // Output
@@ -112,10 +113,7 @@ console.log(groupedUsers);
     { "name": "Eve", "userID": "003", "posts": 300, "comments": 0, "reports": 25 },
     { "name": "Dave", "userID": "005", "posts": 0, "comments": 0, "reports": 5 }
   ],
-  "Verified Users": [
-    { "name": "Alice", "userID": "001", "posts": 50, "comments": 150 },
-    { "name": "Charlie", "userID": "004", "posts": 30, "comments": 90 }
-  ]
+  "Verified Users": [] // since there are no "Verified Users"
 }
 ```
 
